@@ -1,0 +1,17 @@
+# OASIS_START
+# DO NOT EDIT (digest: 088e8663c01a2fd65e86941b3abbbf3b)
+# Library snappy
+"src": include
+<src/*.ml{,i}>: oasis_library_snappy_ccopt
+"src/snappy_stubs.c": oasis_library_snappy_ccopt
+<src/snappy.{cma,cmxa}>: oasis_library_snappy_cclib
+"src/libsnappy_stubs.lib": oasis_library_snappy_cclib
+"src/dllsnappy_stubs.dll": oasis_library_snappy_cclib
+"src/libsnappy_stubs.a": oasis_library_snappy_cclib
+"src/dllsnappy_stubs.so": oasis_library_snappy_cclib
+<src/snappy.{cma,cmxa}>: stubs_snappy
+# Executable test
+<test.{native,byte}>: use_snappy
+<*.ml{,i}>: use_snappy
+<test.{native,byte}>: custom
+# OASIS_STOP

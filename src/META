@@ -1,0 +1,9 @@
+# OASIS_START
+# DO NOT EDIT (digest: 00163e349056ea8105c5e7da61ce14b5)
+version = "0.0.1"
+description = "Bindings to snappy compression library"
+archive(byte) = "snappy.cma"
+archive(native) = "snappy.cmxa"
+exists_if = "snappy.cma"
+# OASIS_STOP
+
