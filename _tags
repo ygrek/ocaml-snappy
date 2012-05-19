@@ -1,7 +1,20 @@
 # OASIS_START
-# DO NOT EDIT (digest: 088e8663c01a2fd65e86941b3abbbf3b)
+# DO NOT EDIT (digest: 8ed89b3b80ed4061878819aed0d91040)
+# Ignore VCS directories, you can use the same kind of rule outside 
+# OASIS_START/STOP if you want to exclude directories that contains 
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
 # Library snappy
-"src": include
+"src/snappy.cmxs": use_snappy
 <src/*.ml{,i}>: oasis_library_snappy_ccopt
 "src/snappy_stubs.c": oasis_library_snappy_ccopt
 <src/snappy.{cma,cmxa}>: oasis_library_snappy_cclib
@@ -9,7 +22,7 @@
 "src/dllsnappy_stubs.dll": oasis_library_snappy_cclib
 "src/libsnappy_stubs.a": oasis_library_snappy_cclib
 "src/dllsnappy_stubs.so": oasis_library_snappy_cclib
-<src/snappy.{cma,cmxa}>: stubs_snappy
+<src/snappy.{cma,cmxa}>: use_libsnappy_stubs
 # Executable test
 <test.{native,byte}>: use_snappy
 <*.ml{,i}>: use_snappy
