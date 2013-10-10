@@ -4,4 +4,3 @@ _build
 setup.log
 setup.data
 *.docdir
-web/index.html
