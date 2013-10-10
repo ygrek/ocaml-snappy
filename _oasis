@@ -5,7 +5,7 @@ Synopsis:    Bindings to snappy compression library
 Authors:     ygrek
 Copyrights:  (C) 2011 ygrek
 License:     BSD3
-Plugins:     DevFiles, META
+Plugins:     DevFiles (0.3), META (0.3)
 BuildTools:  ocamlbuild
 Homepage:    http://snappy.forge.ocamlcore.org/
 
@@ -43,7 +43,7 @@ Test test
 
 Document api
   Title: API reference
-  Type: ocamlbuild
+  Type: ocamlbuild (0.3)
   BuildTools: ocamldoc
   Format: HTML
   Index: index.html
@@ -54,4 +54,3 @@ SourceRepository main
   Type: git
   Location: http://git.ocamlcore.org/snappy/snappy.git
   Browser: http://git.ocamlcore.org/cgi-bin/gitweb.cgi?p=snappy/snappy.git
-
