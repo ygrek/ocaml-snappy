@@ -27,7 +27,7 @@ Library snappy
   Path: src
   Modules: Snappy
   CCopt: -x c++
-  CClib: -lsnappy
+  CClib: -lstdc++ -lsnappy
   CSources: snappy_stubs.c
 
 Executable test
