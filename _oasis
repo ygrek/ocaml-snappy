@@ -1,6 +1,6 @@
 OASISFormat: 0.4
 Name:        snappy
-Version:     0.1.0
+Version:     0.1.1
 Synopsis:    Bindings to snappy compression library
 Authors:     ygrek
 Copyrights:  (C) 2011 ygrek
