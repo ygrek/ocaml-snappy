@@ -2,8 +2,11 @@
 let () =
   Random.self_init ();
   let check n =
-    let s = String.create n in
-    for i = 0 to pred n do s.[i] <- Char.chr (Random.int 256) done;
+    let s =
+      let b = Buffer.create n in
+      for i = 0 to pred n do Buffer.add_char b (Char.chr (Random.int 256)) done;
+      Buffer.contents b
+    in
     let c = Snappy.compress s in
     assert (true = Snappy.is_valid c);
     assert (false = Snappy.is_valid s);
