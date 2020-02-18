@@ -10,7 +10,7 @@ clean:
 doc:
 	dune build @doc
 
-VERSION=$(shell oasis query version)
+VERSION=0.1.2
 NAME=ocaml-snappy-$(VERSION)
 
 .PHONY: release
