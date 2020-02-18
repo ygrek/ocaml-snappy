@@ -1,6 +1,2 @@
-_build
-*.byte
-*.native
-setup.log
-setup.data
-*.docdir
+/_build
+.merlin
